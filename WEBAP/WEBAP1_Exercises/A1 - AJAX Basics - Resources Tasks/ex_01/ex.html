@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <script>
+        $(document).ready(function () {
+            $("#button").click(function () {
+                $("#content").load("name.txt")
+            });
+        });
+    </script>
+<button id="button">Click Me</button>
+    <p id="content"></p>
+    
+</body>
+
+</html>
