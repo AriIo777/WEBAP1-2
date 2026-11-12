@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Exercise 2.9</title>
+    <!-- Include jQuery library as shown in Section 1.1 / 2.3 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            // 1. Load ONLY <option> tags from brands.html when button is clicked
+            $('#button').click(function()
+            {
+                $('#brands').load("brands.html");
+            });
+
+            // 2. Load matching cars from cars.txt when a brand is selected
+            $("#brands").change(function()
+            {
+                var selectedBrand = $(this).val();
+
+                if (selectedBrand !== "")
+                {
+                    // Filter cars by class (e.g., "cars.txt .renault")
+                    $("#cars").load("cars.html"  + " ." + selectedBrand);
+                }
+            });
+        });
+    </script>
 </head>
 <body>
-    <select id="brands"></select> <select id="cars"></select><br>
+    <select id="brands"></select>
+    <select id="cars"></select><br>
     <button id="button">Get brands</button>
 </body>
 </html>

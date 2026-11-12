@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Exercise 2.7</title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".letter a").click(function () {
+                var section = $(this).html().toLowerCase();
+                console.log("Loading section: " + section);
+                $("#dictionary").load(section + ".html");
+
+                // Prevent default page navigation
+                return false;
+            });
+        });
+    </script>
 </head>
+
 <body>
     <div id="container">
 
@@ -43,4 +58,5 @@
 
     </div>
 </body>
+
 </html>
