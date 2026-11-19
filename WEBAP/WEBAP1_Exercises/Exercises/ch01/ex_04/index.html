@@ -8,8 +8,13 @@
     <script>
         $(document).ready(function()
         {
+            $("#calc").click(function(){
+                let num1=parseFloat($("#a").val());
+                let num2=parseFloat($("#b").val());
+                console.log(num1+num2);
+                
+            })
             // TODO: #calc: read #a, #b and #op, convert the values to numbers and display the result in #result
-
             // TODO: error messages for invalid input and division by zero
         });
     </script>
