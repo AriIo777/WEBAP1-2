@@ -9,7 +9,19 @@
         $(document).ready(function()
         {
             // TODO: #summary: display all values in the list #output
+            let name=$("#name").val();
+            let email=$("#email").val();
+            let clas=$("#class").val();
+            let lang=$("#language").val();
+            let nl=$("#newslatter").val();
+            let remarks=$("#remarks").val();
 
+            
+            
+
+             $("#summary").click(function () {
+            alert (summary);
+             })
             // TODO: enable/disable #summary depending on the name field (event input)
 
             // TODO: #reset: clear all fields and the list
@@ -40,7 +52,7 @@
         <p><label><input type="checkbox" id="newsletter" value="yes"> I want to receive the newsletter</label></p>
         <p><label>Remarks:<br><textarea id="remarks" rows="3" cols="40"></textarea></label></p>
         <p>
-            <button type="button" id="summary" disabled>Show summary</button>
+            <button type="button" id="summary">Show summary</button> //add disable
             <button type="button" id="reset">Reset</button>
         </p>
     </form>

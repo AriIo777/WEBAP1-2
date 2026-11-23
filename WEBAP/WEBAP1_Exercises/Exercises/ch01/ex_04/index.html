@@ -9,9 +9,48 @@
         $(document).ready(function()
         {
             // TODO: #calc: read #a, #b and #op, convert the values to numbers and display the result in #result
+            
+            
+            $("#calc").click(function () {
+            
+            
+            let a = parseFloat($("#a").val()); 
+            let b = parseFloat($("#b").val()); 
+            let op = ($("#op").val());
+            let result;
+            switch (op) {
+                case "+":
+                    result = a + b;
+                    break;
+                case "-":
+                    result = a - b;
+                    break;
+                case "*":
+                    result = a * b;
+                    break; 
+                case "/":
+                    result = a / b;
+            }
+            
+            
+            if (b==0 && op == "/") {
+              $("#result").text("error");  
+            }
+            else if (isNaN(a) || isNaN(b)) {
+                $("#result").text("input number");  
+            }
+            else {
+            $("#result").text(result);
+            }
+        
+            })
+
+            //isNaN
 
             // TODO: error messages for invalid input and division by zero
-        });
+
+        })
+
     </script>
 </head>
 <body>
