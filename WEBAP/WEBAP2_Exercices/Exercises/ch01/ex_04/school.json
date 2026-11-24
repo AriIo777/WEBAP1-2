@@ -1,0 +1,70 @@
+{
+    "name": "Lycée Privé Emile Metz",
+    "city": "Luxembourg",
+    "founded": 1906,
+    "sections": [
+        "Informatique",
+        "Électrotechnique",
+        "Mécanique"
+    ],
+    "classes": [
+        {
+            "name": "1TPIF",
+            "teacher": {
+                "firstName": "Yvon",
+                "lastName": "Schubert"
+            },
+            "students": [
+                {
+                    "name": "Anna",
+                    "grades": [
+                        52,
+                        48,
+                        55
+                    ]
+                },
+                {
+                    "name": "Ben",
+                    "grades": [
+                        40,
+                        45,
+                        38
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "2TPIF",
+            "teacher": {
+                "firstName": "Claire",
+                "lastName": "Thill"
+            },
+            "students": [
+                {
+                    "name": "Chloé",
+                    "grades": [
+                        58,
+                        57,
+                        59
+                    ]
+                },
+                {
+                    "name": "David",
+                    "grades": [
+                        33,
+                        41,
+                        47
+                    ]
+                },
+                {
+                    "name": "Emma",
+                    "grades": [
+                        50,
+                        50,
+                        49
+                    ]
+                }
+            ]
+        }
+    ]
+}

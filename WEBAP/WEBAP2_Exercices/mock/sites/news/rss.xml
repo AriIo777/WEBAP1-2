@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Lux Tech News</title>
+        <link>http://localhost/mock/sites/news/</link>
+        <description>Fictional technology news – for the WEBAP2 exercises</description>
+        <language>en</language>
+        <item>
+            <title>Students build a weather dashboard with open data</title>
+            <link>http://localhost/mock/sites/news/article-1042.html</link>
+            <pubDate>Fri, 20 Nov 2026 09:00:00 +0100</pubDate>
+            <category>Schools</category>
+            <description>A class of future IT technicians combined a public weather API with their own database.</description>
+        </item>
+        <item>
+            <title>New data centre opens in Bettembourg</title>
+            <link>http://localhost/mock/sites/news/article-1041.html</link>
+            <pubDate>Wed, 18 Nov 2026 14:30:00 +0100</pubDate>
+            <category>Hardware</category>
+            <description>The building will host servers for several public institutions.</description>
+        </item>
+        <item>
+            <title>jQuery celebrates 20 years</title>
+            <link>http://localhost/mock/sites/news/article-1040.html</link>
+            <pubDate>Sun, 15 Nov 2026 10:15:00 +0100</pubDate>
+            <category>Software</category>
+            <description>The JavaScript library is still used on millions of websites.</description>
+        </item>
+        <item>
+            <title>Open data portal publishes bus timetables as JSON</title>
+            <link>http://localhost/mock/sites/news/article-1039.html</link>
+            <pubDate>Thu, 12 Nov 2026 08:45:00 +0100</pubDate>
+            <category>Software</category>
+            <description>Developers no longer need to extract the data from HTML pages.</description>
+        </item>
+        <item>
+            <title>Robotics contest: LPEM team reaches the final</title>
+            <link>http://localhost/mock/sites/news/article-1038.html</link>
+            <pubDate>Sun, 08 Nov 2026 16:00:00 +0100</pubDate>
+            <category>Schools</category>
+            <description>The robot had to find its way through a maze in less than two minutes.</description>
+        </item>
+    </channel>
+</rss>

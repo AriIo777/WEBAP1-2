@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ByteShop – Computers and accessories</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 1000px; margin: auto; }
+        header { background: #2d6a4f; color: white; padding: 10px 20px; }
+        .products { display: flex; flex-wrap: wrap; gap: 12px; }
+        .product { border: 1px solid #ccc; width: 220px; padding: 10px; }
+        .price { color: #c0392b; font-weight: bold; font-size: 1.2em; }
+        .old-price { text-decoration: line-through; color: #999; }
+        table { border-collapse: collapse; } td, th { border: 1px solid #aaa; padding: 3px 8px; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>ByteShop</h1>
+    <p>Fictional online shop – for the WEBAP2 scraping exercises only</p>
+</header>
+<p>Prices incl. VAT. Last update: 23/11/2026</p>
+<div class="products">
+        <div class="product" id="BB-101" data-category="laptops">
+            <h3 class="name">ByteBook Air 13</h3>
+            <p class="category">Laptops</p>
+            <p class="prices">
+            <span class="price">899,00 €</span></p>
+            <p class="stock in-stock">In stock (12)</p>
+            <a href="product.html?id=BB-101">Details</a>
+        </div>
+        <div class="product" id="BB-102" data-category="laptops">
+            <h3 class="name">ByteBook Pro 15</h3>
+            <p class="category">Laptops</p>
+            <p class="prices">
+            <span class="old-price">1649,00 €</span>
+            <span class="price">1499,00 €</span></p>
+            <p class="stock in-stock">In stock (4)</p>
+            <a href="product.html?id=BB-102">Details</a>
+        </div>
+        <div class="product" id="BB-103" data-category="laptops">
+            <h3 class="name">ByteBook Student 14</h3>
+            <p class="category">Laptops</p>
+            <p class="prices">
+            <span class="price">549,90 €</span></p>
+            <p class="stock sold-out">Sold out</p>
+            <a href="product.html?id=BB-103">Details</a>
+        </div>
+        <div class="product" id="MO-201" data-category="monitors">
+            <h3 class="name">ClearView 24&quot; Monitor</h3>
+            <p class="category">Monitors</p>
+            <p class="prices">
+            <span class="old-price">199,99 €</span>
+            <span class="price">179,99 €</span></p>
+            <p class="stock in-stock">In stock (25)</p>
+            <a href="product.html?id=MO-201">Details</a>
+        </div>
+        <div class="product" id="MO-202" data-category="monitors">
+            <h3 class="name">ClearView 27&quot; 4K Monitor</h3>
+            <p class="category">Monitors</p>
+            <p class="prices">
+            <span class="price">349,00 €</span></p>
+            <p class="stock in-stock">In stock (8)</p>
+            <a href="product.html?id=MO-202">Details</a>
+        </div>
+        <div class="product" id="KB-301" data-category="accessories">
+            <h3 class="name">SilentType Keyboard</h3>
+            <p class="category">Accessories</p>
+            <p class="prices">
+            <span class="price">49,95 €</span></p>
+            <p class="stock in-stock">In stock (40)</p>
+            <a href="product.html?id=KB-301">Details</a>
+        </div>
+        <div class="product" id="MS-302" data-category="accessories">
+            <h3 class="name">Precision Mouse</h3>
+            <p class="category">Accessories</p>
+            <p class="prices">
+            <span class="old-price">29,90 €</span>
+            <span class="price">24,50 €</span></p>
+            <p class="stock in-stock">In stock (63)</p>
+            <a href="product.html?id=MS-302">Details</a>
+        </div>
+        <div class="product" id="HS-303" data-category="accessories">
+            <h3 class="name">StudioSound Headset</h3>
+            <p class="category">Accessories</p>
+            <p class="prices">
+            <span class="price">79,00 €</span></p>
+            <p class="stock sold-out">Sold out</p>
+            <a href="product.html?id=HS-303">Details</a>
+        </div>
+        <div class="product" id="SS-401" data-category="storage">
+            <h3 class="name">FastDisk SSD 1 TB</h3>
+            <p class="category">Storage</p>
+            <p class="prices">
+            <span class="old-price">109,90 €</span>
+            <span class="price">89,90 €</span></p>
+            <p class="stock in-stock">In stock (17)</p>
+            <a href="product.html?id=SS-401">Details</a>
+        </div>
+        <div class="product" id="SS-402" data-category="storage">
+            <h3 class="name">FastDisk SSD 2 TB</h3>
+            <p class="category">Storage</p>
+            <p class="prices">
+            <span class="price">159,00 €</span></p>
+            <p class="stock in-stock">In stock (9)</p>
+            <a href="product.html?id=SS-402">Details</a>
+        </div>
+        <div class="product" id="US-403" data-category="storage">
+            <h3 class="name">PocketDrive USB 128 GB</h3>
+            <p class="category">Storage</p>
+            <p class="prices">
+            <span class="price">14,99 €</span></p>
+            <p class="stock in-stock">In stock (120)</p>
+            <a href="product.html?id=US-403">Details</a>
+        </div>
+        <div class="product" id="RT-501" data-category="network">
+            <h3 class="name">MeshNet Router AX3000</h3>
+            <p class="category">Network</p>
+            <p class="prices">
+            <span class="price">129,00 €</span></p>
+            <p class="stock in-stock">In stock (6)</p>
+            <a href="product.html?id=RT-501">Details</a>
+        </div>
+</div>
+<footer><p>&copy; 2026 ByteShop (fictional)</p></footer>
+</body>
+</html>

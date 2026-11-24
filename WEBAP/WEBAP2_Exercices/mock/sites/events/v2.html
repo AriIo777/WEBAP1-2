@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>What's on in Luxembourg – Events (new design)</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 1000px; margin: auto; }
+        header { background: #2d6a4f; color: white; padding: 10px 20px; }
+        .products { display: flex; flex-wrap: wrap; gap: 12px; }
+        .product { border: 1px solid #ccc; width: 220px; padding: 10px; }
+        .price { color: #c0392b; font-weight: bold; font-size: 1.2em; }
+        .old-price { text-decoration: line-through; color: #999; }
+        table { border-collapse: collapse; } td, th { border: 1px solid #aaa; padding: 3px 8px; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>What's on – new design</h1>
+    <p>The same events as index.html, but the website was redesigned.</p>
+</header>
+<main>
+    <ul class="event-list">
+        <li class="event-card" data-date="2026-11-27" data-category="concert">
+            <time datetime="2026-11-27T19:30">27/11/2026 – 19:30</time>
+            <strong class="title">Indie Night: The Lighthouses</strong>
+            <span class="venue">Rockhal (Esch-sur-Alzette)</span>
+            <span class="price" data-amount="28.00">28.00 €</span>
+        </li>
+        <li class="event-card" data-date="2026-11-28" data-category="fair">
+            <time datetime="2026-11-28T10:00">28/11/2026 – 10:00</time>
+            <strong class="title">Game Developers Fair</strong>
+            <span class="venue">Luxexpo (Luxembourg)</span>
+            <span class="price" data-amount="12.00">12.00 €</span>
+        </li>
+        <li class="event-card" data-date="2026-12-02" data-category="concert">
+            <time datetime="2026-12-02T20:00">02/12/2026 – 20:00</time>
+            <strong class="title">Winter Symphony</strong>
+            <span class="venue">Philharmonie (Luxembourg)</span>
+            <span class="price" data-amount="45.00">45.00 €</span>
+        </li>
+        <li class="event-card" data-date="2026-12-05" data-category="workshop">
+            <time datetime="2026-12-05T14:00">05/12/2026 – 14:00</time>
+            <strong class="title">Coding Workshop for Beginners</strong>
+            <span class="venue">Neimënster (Luxembourg)</span>
+            <span class="price" data-amount="0.00">free</span>
+        </li>
+        <li class="event-card" data-date="2026-12-10" data-category="school">
+            <time datetime="2026-12-10T18:00">10/12/2026 – 18:00</time>
+            <strong class="title">Student Project Presentations</strong>
+            <span class="venue">LPEM Aula (Luxembourg)</span>
+            <span class="price" data-amount="0.00">free</span>
+        </li>
+        <li class="event-card" data-date="2026-12-12" data-category="market">
+            <time datetime="2026-12-12T11:00">12/12/2026 – 11:00</time>
+            <strong class="title">Christmas Market Opening</strong>
+            <span class="venue">Place d'Armes (Luxembourg)</span>
+            <span class="price" data-amount="0.00">free</span>
+        </li>
+        <li class="event-card" data-date="2026-12-19" data-category="concert">
+            <time datetime="2026-12-19T21:00">19/12/2026 – 21:00</time>
+            <strong class="title">Electro Session</strong>
+            <span class="venue">Den Atelier (Luxembourg)</span>
+            <span class="price" data-amount="22.50">22.50 €</span>
+        </li>
+        <li class="event-card" data-date="2027-01-09" data-category="workshop">
+            <time datetime="2027-01-09T09:30">09/01/2027 – 09:30</time>
+            <strong class="title">Hackathon: Open Data</strong>
+            <span class="venue">House of Startups (Luxembourg)</span>
+            <span class="price" data-amount="5.00">5.00 €</span>
+        </li>
+        <li class="event-card" data-date="2027-01-16" data-category="show">
+            <time datetime="2027-01-16T20:00">16/01/2027 – 20:00</time>
+            <strong class="title">Comedy Night</strong>
+            <span class="venue">Kulturfabrik (Esch-sur-Alzette)</span>
+            <span class="price" data-amount="18.00">18.00 €</span>
+        </li>
+        <li class="event-card" data-date="2027-01-23" data-category="tour">
+            <time datetime="2027-01-23T15:00">23/01/2027 – 15:00</time>
+            <strong class="title">Guided Tour: Fortress History</strong>
+            <span class="venue">Musée Dräi Eechelen (Luxembourg)</span>
+            <span class="price" data-amount="7.00">7.00 €</span>
+        </li>
+    </ul>
+</main>
+</body>
+</html>

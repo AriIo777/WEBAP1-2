@@ -1,0 +1,4 @@
+body { font-family: system-ui, Arial, sans-serif; max-width: 1000px; margin: auto; padding: 0 15px; }
+.view { display: none; }
+.view.active { display: block; }
+.message { display: none; color: #c0392b; }

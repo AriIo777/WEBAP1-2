@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WEBAP2 – Chapter 1 exercises</title>
+    <link rel="stylesheet" href="../../assets/instructions.css">
+</head>
+<body>
+<nav><a href="../../index.html">↑ Overview</a> <a href="../ch02/instructions.html">Chapter 2 →</a></nav>
+<h1>Chapter 1 – Repetition: AJAX, JSON and PHP</h1>
+<p class="meta">Script: Chapter 1<br>
+Folder: <code>/WEBAP/Exercises/ch01/</code> – one folder <code>ex_xx</code> per exercise. Comments marked
+<code>TODO</code> show where to write your code. Folders containing only a <code>README.txt</code> start from a copy of
+the previous exercise.</p>
+<p>These exercises repeat the most important techniques of WEBAP1 and introduce <code>json_decode()</code>, which you need to read JSON from files and external services.</p>
+<h2 id="ex_01">Exercise 1.1 – Associative arrays → JSON → table</h2>
+<p class="folder">Folder: ch01/ex_01/ &nbsp; <a class="open" href="ex_01/">open folder</a> &nbsp; Files provided: <code>getStudents.php</code>, <code>index.html</code></p>
+<p><b>getStudents.php</b> contains an array of associative arrays (one per student).</p><ol><li>Complete the PHP script so that it outputs the array as JSON (header + <code>json_encode()</code>). Open it in the browser: what does the JSON look like?</li><li>At the push of the button, load the data with <code>$.getJSON()</code> and display it as a table with the columns first name, last name, class and age.</li><li>Add a drop-down list with the classes. The PHP script receives the selected class as URL parameter <code>class</code> and returns only the students of this class (<code>array_filter()</code> or a <code>foreach</code> loop).</li></ol>
+<h2 id="ex_02">Exercise 1.2 – Reading a JSON file with json_decode()</h2>
+<p class="folder">Folder: ch01/ex_02/ &nbsp; <a class="open" href="ex_02/">open folder</a> &nbsp; Files provided: <code>getMovies.php</code>, <code>index.html</code>, <code>movies.json</code></p>
+<p>The file <b>movies.json</b> contains a list of movies. The client must not load the file directly: <b>getMovies.php</b> reads it, filters it and returns only the matching movies.</p><ol><li>Read the file with <code>file_get_contents()</code> and convert it with <code>json_decode($text, true)</code> into a PHP array. Test with <code>var_dump()</code> or <code>print_r()</code>.</li><li>Return only movies released in or after the year given by the parameter <code>from</code> and – if the parameter <code>genre</code> is not empty – of this genre.</li><li>Sort the result by rating, best first (<code>usort()</code> with <code>&lt;=&gt;</code>).</li><li>The client displays the movies as list: <i>Inception (2010) – 8.8</i>.</li></ol>
+<h2 id="ex_03">Exercise 1.3 – A poll with a JSON file</h2>
+<p class="folder">Folder: ch01/ex_03/ &nbsp; <a class="open" href="ex_03/">open folder</a> &nbsp; Files provided: <code>index.html</code>, <code>vote.php</code></p>
+<p>Program a small poll. The votes are stored in the file <b>votes.json</b> on the server, e.g. <code>{"Python": 3, "JavaScript": 5, "Java": 1, "C#": 0}</code>.</p><ol><li><b>vote.php</b> reads the file (<code>json_decode(…, true)</code>). If it does not exist yet, all options start with 0 votes.</li><li>If an option was sent with POST (<code>$_POST["option"]</code>), its counter is increased and the file is saved again (<code>file_put_contents()</code>, <code>JSON_PRETTY_PRINT</code>).</li><li><b>vote.php</b> always returns the current results as JSON object.</li><li>The client sends a vote with <code>$.post()</code> when a button is clicked, and displays the results as bars (width in % of all votes). The results are also shown when the page is loaded.</li></ol><p class="tip">The web server needs write access to the folder (see chapter 10 of the script).</p>
+<h2 id="ex_04">Exercise 1.4 – Navigating nested data in PHP</h2>
+<p class="folder">Folder: ch01/ex_04/ &nbsp; <a class="open" href="ex_04/">open folder</a> &nbsp; Files provided: <code>school.json</code>, <code>school.php</code></p>
+<p>The file <b>school.json</b> contains nested objects and arrays – exactly like the answers of real web services. Write <b>school.php</b>, which reads the file with <code>json_decode(…, true)</code> and outputs the following information as HTML (no AJAX in this exercise):</p><ol><li>The name of the school and the year it was founded.</li><li>The number of sections and a comma-separated list of them (<code>count()</code>, <code>implode()</code>).</li><li>The last name of the teacher of the second class.</li><li>For every class: its name and the names of all students (nested <code>foreach</code>).</li><li>For every student: the average of the grades, rounded to one decimal (<code>array_sum()</code>, <code>count()</code>, <code>round()</code>).</li><li>What would you write in <b>JavaScript</b> to access the teacher’s last name of the second class? Write the answer as a comment at the end of your script.</li></ol><p class="tip">Tip: draw the structure first. Curly braces <code>{}</code> become associative arrays, square brackets <code>[]</code> become numeric arrays.</p>
+</body>
+</html>

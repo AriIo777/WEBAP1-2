@@ -1,0 +1,57 @@
+{
+    "latitude": 49.62,
+    "longitude": 6.12,
+    "generationtime_ms": 0.08,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Luxembourg",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 300.0,
+    "current_units": {
+        "time": "iso8601",
+        "interval": "seconds",
+        "temperature_2m": "°C",
+        "weather_code": "wmo code",
+        "wind_speed_10m": "km/h"
+    },
+    "current": {
+        "time": "2026-11-23T10:00",
+        "interval": 900,
+        "temperature_2m": 6.4,
+        "weather_code": 3,
+        "wind_speed_10m": 14.2
+    },
+    "daily_units": {
+        "time": "iso8601",
+        "temperature_2m_max": "°C",
+        "temperature_2m_min": "°C",
+        "precipitation_sum": "mm",
+        "weather_code": "wmo code"
+    },
+    "daily": {
+        "time": [
+            "2026-11-23",
+            "2026-11-24",
+            "2026-11-25"
+        ],
+        "temperature_2m_max": [
+            7.9,
+            9.1,
+            5.2
+        ],
+        "temperature_2m_min": [
+            2.3,
+            4.0,
+            -0.8
+        ],
+        "precipitation_sum": [
+            0.0,
+            4.6,
+            1.2
+        ],
+        "weather_code": [
+            3,
+            61,
+            71
+        ]
+    }
+}

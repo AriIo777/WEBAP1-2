@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.5</title>
+    <link rel="stylesheet" href="../../../assets/exercise.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            // TODO: #search (and Enter): call cityWeather.php?city=...
+
+            // TODO: display the card or the error message
+        });
+    </script>
+</head>
+<body>
+    <p>
+        <input type="text" id="city" placeholder="City, e.g. Ettelbruck">
+        <button id="search">Show weather</button>
+    </p>
+    <p id="message"></p>
+    <div id="card" class="box" style="display: none">
+        <h2 id="name"></h2>
+        <p id="details"></p>
+        <p class="result" id="temp"></p>
+    </div>
+</body>
+</html>

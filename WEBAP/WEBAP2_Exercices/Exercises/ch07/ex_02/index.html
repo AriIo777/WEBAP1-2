@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7.2 Notes SPA</title>
+    <link rel="stylesheet" href="../../../assets/exercise.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="#list">All notes</a>
+        <a href="#new">+ New note</a>
+    </nav>
+    <p id="message" class="message"></p>
+    <p id="loading">loading …</p>
+
+    <section id="view-list" class="view">
+        <h2>Notes</h2>
+        <input type="search" id="search" placeholder="Search in title and text">
+        <div id="notes" class="cards"></div>
+    </section>
+
+    <section id="view-edit" class="view">
+        <h2 id="editTitle">New note</h2>
+        <form id="noteForm">
+            <input type="hidden" id="noteId">
+            <p><input type="text" id="noteTitle" placeholder="Title" size="50" required></p>
+            <p><textarea id="noteText" rows="8" cols="60" placeholder="Text"></textarea></p>
+            <p>
+                <button type="submit">Save</button>
+                <button type="button" id="deleteNote">Delete</button>
+                <a href="#list">Cancel</a>
+            </p>
+        </form>
+    </section>
+</body>
+</html>

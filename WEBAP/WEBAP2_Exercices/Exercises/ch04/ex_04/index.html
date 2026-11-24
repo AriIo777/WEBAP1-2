@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4.4</title>
+    <link rel="stylesheet" href="../../../assets/exercise.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            // TODO: load rates.php when the page is loaded and when #base changes; store the list
+
+            // TODO: render(): display the filtered and sorted list
+
+            // TODO: #filter (input) and click on th[data-sort]
+        });
+    </script>
+</head>
+<body>
+    <p>
+        Base currency: <select id="base"><option>EUR</option><option>USD</option><option>GBP</option><option>CHF</option></select>
+        <input type="text" id="filter" placeholder="Filter, e.g. dollar">
+    </p>
+    <table id="rates">
+        <thead><tr><th data-sort="code">Code ⇅</th><th data-sort="name">Currency ⇅</th><th data-sort="rate">Rate ⇅</th></tr></thead>
+        <tbody></tbody>
+    </table>
+</body>
+</html>

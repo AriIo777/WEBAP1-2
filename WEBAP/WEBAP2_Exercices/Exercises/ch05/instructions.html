@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WEBAP2 – Chapter 5 exercises</title>
+    <link rel="stylesheet" href="../../assets/instructions.css">
+</head>
+<body>
+<nav><a href="../../index.html">↑ Overview</a> <a href="../ch04/instructions.html">← Chapter 4</a> <a href="../ch06/instructions.html">Chapter 6 →</a></nav>
+<h1>Chapter 5 – Single page web applications</h1>
+<p class="meta">Script: Chapter 5<br>
+Folder: <code>/WEBAP/Exercises/ch05/</code> – one folder <code>ex_xx</code> per exercise. Comments marked
+<code>TODO</code> show where to write your code. Folders containing only a <code>README.txt</code> start from a copy of
+the previous exercise.</p>
+<p>A single page application (SPA) never reloads the page: views are shown and hidden with jQuery, and data is loaded with AJAX. These exercises practise the structure of a SPA: views, navigation with the URL hash, state and render functions.</p>
+<h2 id="ex_01">Exercise 5.1 – Views and hash navigation</h2>
+<p class="folder">Folder: ch05/ex_01/ &nbsp; <a class="open" href="ex_01/">open folder</a> &nbsp; Files provided: <code>index.html</code></p>
+<p>The page contains three views (<code>section.view</code>). Only the view with the class <code>active</code> is visible.</p><ol><li>Write a function <code>showView(name)</code> that shows the view <code>#view-name</code> and hides all others, and marks the corresponding link in the navigation (class <code>active</code>).</li><li>The links point to <code>#home</code>, <code>#news</code>, <code>#contact</code>. React to the event <code>hashchange</code> of <code>window</code> and show the view given by <code>location.hash</code>.</li><li>When the page is opened, show the view of the current hash (e.g. <code>index.html#news</code>), or <i>home</i> if the hash is empty or unknown.</li><li>Test the <b>back</b> and <b>forward</b> buttons of the browser and check that “Loaded at” never changes.</li><li>Change the title of the browser tab according to the view (<code>document.title</code>).</li></ol>
+<h2 id="ex_02">Exercise 5.2 – Master–detail with internal and external data</h2>
+<p class="folder">Folder: ch05/ex_02/ &nbsp; <a class="open" href="ex_02/">open folder</a> &nbsp; Files provided: <code>cities.json</code>, <code>index.html</code>, <code>weather.php</code></p>
+<p>A classic SPA pattern: a list (master) and a detail view. The cities come from an <b>internal</b> source (<b>cities.json</b>), the current weather from an <b>external</b> one (the provided proxy <b>weather.php</b>).</p><ol><li>When the page is loaded, load <b>cities.json</b> once and store it in a global variable (the state).</li><li>The list view shows the cities as links <code>#city/3</code> (3 = id).</li><li>The route <code>#city/3</code> shows the detail view of the city (find it with <code>Array.find()</code>), and then loads its weather from <b>weather.php?lat=…&amp;lon=…</b>. Show “loading …” meanwhile.</li><li>An unknown id leads back to the list. Bookmarking <code>index.html#city/4</code> must open the detail of Metz.</li><li>Format the population with <code>toLocaleString()</code>.</li></ol>
+<h2 id="ex_03">Exercise 5.3 – State and render function</h2>
+<p class="folder">Folder: ch05/ex_03/ &nbsp; <a class="open" href="ex_03/">open folder</a> &nbsp; Files provided: <code>index.html</code></p>
+<p>A shopping list that works entirely in the browser. Follow the pattern of section 5.4: <b>all data is in one state object</b>, the events only change the state, and one function <code>render()</code> redraws the view from the state.</p><ol><li>State: <code>{ items: [ {id, name, qty, done} ], filter: "all" }</code>.</li><li>The form adds an item (<code>id: Date.now()</code>). Clicking on an item toggles <code>done</code>; the ✕ button deletes it (event delegation, <code>data-id</code>, <code>closest("li")</code>).</li><li>The filter buttons show all / open / bought items. A summary shows <i>3 of 5 items still to buy</i>.</li><li>Save the items in <code>localStorage</code> at every render and restore them when the page is loaded (<code>JSON.stringify()</code> / <code>JSON.parse()</code>).</li><li>Why is it easier to keep the view correct with a single <code>render()</code> function than with many small changes of the DOM? Write your answer as a comment.</li></ol>
+<h2 id="ex_04">Exercise 5.4 – Client or server? Planning a SPA</h2>
+<p class="folder">Folder: ch05/ex_04/ &nbsp; <a class="open" href="ex_04/">open folder</a> &nbsp; Files provided: <code>analysis.md</code></p>
+<p>Fill in <b>analysis.md</b>: for two scenarios (and your own idea), decide which tasks the client and which the server should do, and justify each decision (section 5.5). Then design the API of scenario A. This analysis is required in your project (chapter 8).</p>
+</body>
+</html>

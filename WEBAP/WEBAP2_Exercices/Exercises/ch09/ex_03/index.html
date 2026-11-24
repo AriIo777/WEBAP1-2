@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>9.3</title>
+    <link rel="stylesheet" href="../../../assets/exercise.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            // TODO: load timetable.php once, fill #stop, set #time to now
+
+            // TODO: show the next 5 departures; update on change of #stop or #time
+        });
+    </script>
+</head>
+<body>
+    <p>
+        Stop: <select id="stop"></select>
+        Time: <input type="time" id="time">
+    </p>
+    <p id="valid"></p>
+    <h3>Next departures</h3>
+    <ul id="departures"></ul>
+</body>
+</html>

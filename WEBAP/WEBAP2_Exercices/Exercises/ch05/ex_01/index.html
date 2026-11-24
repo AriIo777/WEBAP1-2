@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.1</title>
+    <link rel="stylesheet" href="../../../assets/exercise.css">
+    <style>
+        .view { display: none; }
+        .view.active { display: block; }
+        nav a { margin-right: 15px; }
+        nav a.active { font-weight: bold; text-decoration: none; }
+    </style>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            // TODO: showView(name): show #view-name, hide the others, mark the link
+
+            // TODO: react to hashchange, show the first view when the page is opened
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="view-home" class="view">
+        <h2>Home</h2>
+        <p>Welcome to our single page application. The page is never reloaded!</p>
+        <p>Loaded at: <span id="loadedAt"></span></p>
+    </section>
+
+    <section id="view-news" class="view">
+        <h2>News</h2>
+        <ul>
+            <li>The SPA module starts this week.</li>
+            <li>Remember to bring your planning document.</li>
+        </ul>
+    </section>
+
+    <section id="view-contact" class="view">
+        <h2>Contact</h2>
+        <p>Lycée Privé Emile Metz, Luxembourg</p>
+    </section>
+</body>
+</html>
