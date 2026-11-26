@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4.3</title>
+    <link rel="stylesheet" href="../../../assets/exercise.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            // TODO: #search: call books.php with q and sort, display one card per book
+
+            // TODO: #onlyCovers: hide/show the cards without cover (no new request)
+        });
+    </script>
+</head>
+<body>
+    <p>
+        <input type="text" id="q" placeholder="Title or author" value="Tolkien">
+        <select id="sort">
+            <option value="relevance">relevance</option>
+            <option value="year">year (newest first)</option>
+            <option value="title">title (A–Z)</option>
+        </select>
+        <button id="search">Search</button>
+        <label><input type="checkbox" id="onlyCovers"> only books with a cover</label>
+    </p>
+    <p id="count"></p>
+    <div id="books" class="cards"></div>
+</body>
+</html>

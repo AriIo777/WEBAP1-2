@@ -1,0 +1,44 @@
+/* Shared basic style for all WEBAP2 exercise pages */
+body {
+    font-family: system-ui, "Segoe UI", Arial, sans-serif;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 15px;
+    line-height: 1.5;
+    color: #222;
+}
+input, select, textarea, button { font: inherit; padding: 4px 8px; margin: 2px; }
+button { cursor: pointer; }
+table { border-collapse: collapse; margin: 10px 0; }
+th, td { border: 1px solid #bbb; padding: 4px 10px; text-align: left; }
+th { background: #deeaf6; }
+th[data-sort] { cursor: pointer; }
+td.number { text-align: right; }
+.box { border: 1px solid #bbb; padding: 10px 15px; min-height: 1.5em; background: #fafafa; }
+pre.box { white-space: pre-wrap; }
+.error { color: #c0392b; font-weight: bold; }
+.ok { color: #1e8449; font-weight: bold; }
+.result { font-weight: bold; font-size: 1.2em; }
+.warm { background: #fdebd0; }
+.tip { background: #eaf2fb; border-left: 4px solid #2e86c1; padding: 6px 10px; }
+.bar { height: 14px; background: #2e86c1; margin: 0 0 8px; min-width: 2px; }
+
+/* cards */
+.cards { display: flex; flex-wrap: wrap; gap: 12px; }
+.card { border: 1px solid #ccc; border-radius: 6px; padding: 10px; width: 200px; background: #fff;
+        box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+.card h4 { margin: 6px 0 2px; }
+.card p { margin: 2px 0; font-size: 0.9em; }
+.card img { width: 100%; height: 180px; object-fit: contain; background: #eee; }
+.placeholder { height: 180px; background: #ddd; color: #777; display: flex; align-items: center; justify-content: center; }
+
+/* bar chart (4.5) */
+.chart { display: flex; align-items: flex-end; gap: 6px; height: 190px; border-bottom: 1px solid #999; padding-top: 10px; }
+.chart .column { display: flex; flex-direction: column; align-items: center; font-size: 0.75em; }
+.chart .bars { display: flex; align-items: flex-end; gap: 2px; height: 160px; }
+.chart .bar-max { width: 12px; background: #e74c3c; }
+.chart .bar-min { width: 12px; background: #3498db; }
+
+/* SPA views */
+.view { display: none; }
+.view.active { display: block; }

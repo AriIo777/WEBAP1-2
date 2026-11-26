@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WEBAP2 – Exercises</title>
+    <link rel="stylesheet" href="assets/instructions.css">
+</head>
+<body>
+<h1>WEBAP2 – Web Applications 2: exercises</h1>
+<p>External APIs, single page applications and data extraction. Open the exercise sheet of a chapter, solve each
+exercise in its folder <code>ex_xx</code> and test it here in the browser (<code>http://localhost:8080/…</code>).</p>
+<table>
+    <thead><tr><th>Chapter</th><th>Topic</th><th>Exercises</th><th>Folder</th></tr></thead>
+    <tbody>
+        <tr><td>1</td><td><a href="Exercises/ch01/instructions.html">Repetition: AJAX, JSON and PHP</a></td><td>4</td><td><a href="Exercises/ch01/">ch01/</a></td></tr>
+        <tr><td>2</td><td><a href="Exercises/ch02/instructions.html">Web services and APIs</a></td><td>4</td><td><a href="Exercises/ch02/">ch02/</a></td></tr>
+        <tr><td>3</td><td><a href="Exercises/ch03/instructions.html">Loading external JSON data with PHP</a></td><td>6</td><td><a href="Exercises/ch03/">ch03/</a></td></tr>
+        <tr><td>4</td><td><a href="Exercises/ch04/instructions.html">Processing and using the received data</a></td><td>5</td><td><a href="Exercises/ch04/">ch04/</a></td></tr>
+        <tr><td>5</td><td><a href="Exercises/ch05/instructions.html">Single page web applications</a></td><td>4</td><td><a href="Exercises/ch05/">ch05/</a></td></tr>
+        <tr><td>6</td><td><a href="Exercises/ch06/instructions.html">Creating a server API in PHP</a></td><td>5</td><td><a href="Exercises/ch06/">ch06/</a></td></tr>
+        <tr><td>7</td><td><a href="Exercises/ch07/instructions.html">Building the SPA client with jQuery</a></td><td>4</td><td><a href="Exercises/ch07/">ch07/</a></td></tr>
+        <tr><td>8</td><td><a href="Exercises/ch08/instructions.html">Project: your own single page web app</a></td><td>1</td><td><a href="Exercises/ch08/">ch08/</a></td></tr>
+        <tr><td>9</td><td><a href="Exercises/ch09/instructions.html">Extracting data from existing HTML (web scraping)</a></td><td>6</td><td><a href="Exercises/ch09/">ch09/</a></td></tr>
+    </tbody>
+</table>
+
+<h2>Tools and services</h2>
+<table>
+    <tr><td>API tester (chapter 6)</td><td><a href="Exercises/tools/api-tester.html">Exercises/tools/api-tester.html</a></td></tr>
+    <tr><td>Configuration (API URLs, database, getJson())</td><td><code>Exercises/common/config.php</code></td></tr>
+    <tr><td>Weather codes → text/icon</td><td><code>Exercises/common/weathercodes.php</code></td></tr>
+    <tr><td>Fictional websites (chapter 9)</td><td><a href="mock/sites/">mock/sites/</a></td></tr>
+    <tr><td>Offline mock services</td><td><a href="mock/open-meteo/search.php?name=Lux">Open-Meteo geocoding</a>,
+        <a href="mock/open-meteo/forecast.php?latitude=49.61&amp;longitude=6.13&amp;current=temperature_2m">forecast</a>,
+        <a href="mock/frankfurter/latest.php">Frankfurter</a>,
+        <a href="mock/openlibrary/search.php?q=tolkien">Open Library</a></td></tr>
+</table>
+<p class="tip">No internet or an API is down? Set <code>OFFLINE</code> to <code>true</code> in
+<code>Exercises/common/config.php</code>: all exercises then use the local mock services, which return the same JSON
+structure as the real APIs.</p>
+
+<h2>Working environment</h2>
+<table>
+    <tr><td>Web server (Apache + PHP)</td><td><a href="http://localhost:8080">http://localhost:8080</a></td></tr>
+    <tr><td>phpMyAdmin</td><td><a href="http://localhost:8081">http://localhost:8081</a> (user <code>root</code>, password <code>rootpassword</code>)</td></tr>
+    <tr><td>Database for PHP</td><td>host <code>db</code>, database <code>webap2_db</code>, user <code>webap_user</code>, password <code>webap_password</code></td></tr>
+    <tr><td>jQuery</td><td><code>&lt;script src="https://code.jquery.com/jquery-4.0.0.min.js"&gt;&lt;/script&gt;</code></td></tr>
+</table>
+</body>
+</html>

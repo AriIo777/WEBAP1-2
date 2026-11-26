@@ -1,0 +1,12 @@
+/* styles of this SPA */
+.view { display: none; }
+.view.active { display: block; }
+nav a { margin-right: 15px; }
+nav a.active { font-weight: bold; text-decoration: none; }
+.message { position: fixed; top: 10px; right: 10px; padding: 8px 14px; border-radius: 4px; background: #fff;
+           box-shadow: 0 2px 6px rgba(0,0,0,.2); display: none; }
+#loading { position: fixed; bottom: 10px; right: 10px; display: none; }
+.city-card { cursor: pointer; text-align: center; }
+.city-card .icon { font-size: 2.5em; }
+.city-card .temp { font-size: 1.6em; font-weight: bold; }
+#refresh { font-size: 0.7em; }

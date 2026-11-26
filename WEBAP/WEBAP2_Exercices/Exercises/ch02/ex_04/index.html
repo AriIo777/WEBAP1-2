@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.4</title>
+    <link rel="stylesheet" href="../../../assets/exercise.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            // TODO: #build: build the URL from the form fields with $.param()
+
+            // TODO: display it as link in #url
+        });
+    </script>
+</head>
+<body>
+    <h2>Open-Meteo URL builder</h2>
+    <p>
+        <label>Latitude <input type="number" id="lat" value="49.61" step="0.01"></label>
+        <label>Longitude <input type="number" id="lon" value="6.13" step="0.01"></label>
+        <label>Days <input type="number" id="days" value="3" min="1" max="16"></label>
+    </p>
+    <fieldset>
+        <legend>Current values</legend>
+        <label><input type="checkbox" name="current" value="temperature_2m" checked> temperature</label>
+        <label><input type="checkbox" name="current" value="wind_speed_10m"> wind speed</label>
+        <label><input type="checkbox" name="current" value="weather_code"> weather code</label>
+    </fieldset>
+    <fieldset>
+        <legend>Daily values</legend>
+        <label><input type="checkbox" name="daily" value="temperature_2m_max" checked> max. temperature</label>
+        <label><input type="checkbox" name="daily" value="temperature_2m_min" checked> min. temperature</label>
+        <label><input type="checkbox" name="daily" value="precipitation_sum"> precipitation</label>
+        <label><input type="checkbox" name="daily" value="weather_code"> weather code</label>
+    </fieldset>
+    <p><button id="build">Build URL</button></p>
+    <p><a id="url" href="#" target="_blank"></a></p>
+</body>
+</html>

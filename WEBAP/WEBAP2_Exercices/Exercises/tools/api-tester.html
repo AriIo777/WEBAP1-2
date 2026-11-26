@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API tester</title>
+    <link rel="stylesheet" href="../../assets/exercise.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <style>
+        #url { width: 60%; }
+        textarea { width: 100%; font-family: Consolas, monospace; }
+        pre { white-space: pre-wrap; }
+    </style>
+    <script>
+        // Small tool to test your own server API (chapter 6) without writing a client first
+        $(document).ready(function()
+        {
+            $("#send").click(function()
+            {
+                let method = $("#method").val();
+                let type   = $("#type").val();
+                let body   = $("#body").val();
+                let options = { url: $("#url").val(), method: method, dataType: "text" };
+
+                if (method !== "GET" && body.trim() !== "")
+                {
+                    options.data = body;
+                    options.contentType = type === "json" ? "application/json" : "application/x-www-form-urlencoded";
+                }
+
+                let start = Date.now();
+                $("#status").text("sending …").attr("class", "");
+                $.ajax(options).always(function(a, textStatus, c)
+                {
+                    let xhr = textStatus === "success" ? c : a;
+                    let ms = Date.now() - start;
+                    $("#status").text("HTTP " + xhr.status + " " + xhr.statusText + "  (" + ms + " ms)")
+                                .attr("class", xhr.status >= 200 && xhr.status < 300 ? "ok" : "error");
+                    let text = xhr.responseText || "";
+                    try
+                    {
+                        text = JSON.stringify(JSON.parse(text), null, 4);
+                    }
+                    catch (e)
+                    {
+                        // not JSON: show the raw text
+                    }
+                    $("#response").text(text);
+                });
+            });
+
+            $(".example").click(function(e)
+            {
+                e.preventDefault();
+                $("#method").val($(this).data("method"));
+                $("#url").val($(this).data("url"));
+                $("#type").val($(this).data("type") || "form");
+                $("#body").val($(this).data("body") || "");
+            });
+        });
+    </script>
+</head>
+<body>
+<h2>API tester</h2>
+<p>Test the API of your exercise: choose the method, enter the URL (relative to this page or absolute) and, for
+POST/PUT/DELETE, the data to send.</p>
+<p>
+    <select id="method">
+        <option>GET</option>
+        <option>POST</option>
+        <option>PUT</option>
+        <option>DELETE</option>
+    </select>
+    <input type="text" id="url" value="../ch06/ex_01/api/notes.php?action=list">
+    <button id="send">Send</button>
+</p>
+<p>
+    Body format:
+    <select id="type">
+        <option value="form">form data (name=value&amp;name2=value2) → $_POST</option>
+        <option value="json">JSON ({"name": "value"}) → php://input</option>
+    </select>
+</p>
+<textarea id="body" rows="5" placeholder="title=Shopping&amp;text=Milk, bread"></textarea>
+<p id="status"></p>
+<pre id="response" class="box"></pre>
+
+<h3>Examples</h3>
+<ul>
+    <li><a href="#" class="example" data-method="GET" data-url="../../mock/open-meteo/search.php?name=Lux&amp;count=3">GET mock geocoding</a></li>
+    <li><a href="#" class="example" data-method="GET" data-url="../ch06/ex_02/api/todos.php?action=list">GET todo list (ch06/ex_02)</a></li>
+    <li><a href="#" class="example" data-method="POST" data-url="../ch06/ex_02/api/todos.php?action=add" data-body="title=Learn PHP">POST new todo (form data)</a></li>
+    <li><a href="#" class="example" data-method="POST" data-type="json" data-url="../ch06/ex_03/api/todos.php?action=add" data-body='{"title": "Learn JSON"}'>POST new todo (JSON body, ch06/ex_03)</a></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.2</title>
+    <link rel="stylesheet" href="../../../assets/exercise.css">
+    <style>
+        .view { display: none; }
+        .view.active { display: block; }
+        nav a { margin-right: 15px; }
+        nav a.active { font-weight: bold; text-decoration: none; }
+    </style>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            // TODO: load cities.json once, store it
+
+            // TODO: route(): #list → list view, #city/id → detail view (+ weather.php)
+
+            // TODO: hashchange
+        });
+    </script>
+</head>
+<body>
+    <nav><a href="#list">All cities</a></nav>
+
+    <section id="view-list" class="view">
+        <h2>Cities</h2>
+        <ul id="cities"></ul>
+    </section>
+
+    <section id="view-detail" class="view">
+        <p><a href="#list">← back to the list</a></p>
+        <h2 id="name"></h2>
+        <p id="description"></p>
+        <table>
+            <tr><th>Country</th><td id="country"></td></tr>
+            <tr><th>Population</th><td id="population"></td></tr>
+            <tr><th>Coordinates</th><td id="coords"></td></tr>
+            <tr><th>Weather now</th><td id="weather">…</td></tr>
+        </table>
+    </section>
+</body>
+</html>

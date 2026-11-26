@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7.1 Todo SPA</title>
+    <link rel="stylesheet" href="../../../assets/exercise.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+    <h1>My todos</h1>
+    <p id="message" class="message"></p>
+    <p id="loading">loading …</p>
+
+    <form id="addForm">
+        <input type="text" id="title" placeholder="What needs to be done?" required>
+        <button type="submit">Add</button>
+    </form>
+
+    <p>
+        <button class="filter" data-filter="all">All</button>
+        <button class="filter" data-filter="open">Open</button>
+        <button class="filter" data-filter="done">Done</button>
+        <span id="counter"></span>
+    </p>
+
+    <ul id="todos" class="todo-list"></ul>
+    <p class="tip">Checkbox: done / not done – double-click on the text: edit – ✕: delete</p>
+</body>
+</html>

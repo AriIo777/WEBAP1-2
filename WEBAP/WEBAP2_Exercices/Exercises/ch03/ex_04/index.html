@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.4</title>
+    <link rel="stylesheet" href="../../../assets/exercise.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            // TODO: click on .test: call test.php?case=... with $.ajax()
+
+            // TODO: .done(): show the answer, .fail(): show xhr.responseJSON.error in red
+        });
+    </script>
+</head>
+<body>
+    <p>
+        <button class="test" data-case="ok">Correct request</button>
+        <button class="test" data-case="badparam">Missing parameter (400)</button>
+        <button class="test" data-case="notfound">Wrong path (404)</button>
+        <button class="test" data-case="nohost">Unknown server</button>
+        <button class="test" data-case="nojson">Not JSON</button>
+    </p>
+    <p id="status"></p>
+    <pre id="output" class="box"></pre>
+</body>
+</html>

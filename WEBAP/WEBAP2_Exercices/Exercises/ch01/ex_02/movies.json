@@ -1,0 +1,62 @@
+[
+    {
+        "title": "The Matrix",
+        "year": 1999,
+        "genre": "Science fiction",
+        "rating": 8.7
+    },
+    {
+        "title": "Spirited Away",
+        "year": 2001,
+        "genre": "Animation",
+        "rating": 8.6
+    },
+    {
+        "title": "Inception",
+        "year": 2010,
+        "genre": "Science fiction",
+        "rating": 8.8
+    },
+    {
+        "title": "Coco",
+        "year": 2017,
+        "genre": "Animation",
+        "rating": 8.4
+    },
+    {
+        "title": "The Social Network",
+        "year": 2010,
+        "genre": "Drama",
+        "rating": 7.8
+    },
+    {
+        "title": "Interstellar",
+        "year": 2014,
+        "genre": "Science fiction",
+        "rating": 8.7
+    },
+    {
+        "title": "Up",
+        "year": 2009,
+        "genre": "Animation",
+        "rating": 8.3
+    },
+    {
+        "title": "Hidden Figures",
+        "year": 2016,
+        "genre": "Drama",
+        "rating": 7.8
+    },
+    {
+        "title": "WALL·E",
+        "year": 2008,
+        "genre": "Animation",
+        "rating": 8.4
+    },
+    {
+        "title": "The Imitation Game",
+        "year": 2014,
+        "genre": "Drama",
+        "rating": 8.0
+    }
+]

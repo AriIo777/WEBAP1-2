@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bus line 16 – Timetable (Monday to Friday)</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 1000px; margin: auto; }
+        header { background: #2d6a4f; color: white; padding: 10px 20px; }
+        .products { display: flex; flex-wrap: wrap; gap: 12px; }
+        .product { border: 1px solid #ccc; width: 220px; padding: 10px; }
+        .price { color: #c0392b; font-weight: bold; font-size: 1.2em; }
+        .old-price { text-decoration: line-through; color: #999; }
+        table { border-collapse: collapse; } td, th { border: 1px solid #aaa; padding: 3px 8px; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Line 16: Gare Centrale → Luxexpo</h1>
+    <p>Fictional timetable – for the WEBAP2 scraping exercises only</p>
+</header>
+<p id="valid">Valid from <span class="date">01/09/2026</span> to <span class="date">15/07/2027</span>, Monday to Friday.</p>
+<table id="timetable">
+    <thead>
+        <tr><th>Luxembourg, Gare Centrale</th><th>Hamilius</th><th>Kirchberg, Philharmonie</th><th>Kirchberg, Luxexpo</th><th>Remark</th></tr>
+    </thead>
+    <tbody>
+            <tr class="trip"><td>05:40</td><td>05:46</td><td>05:52</td><td>05:58</td><td class="note"></td></tr>
+            <tr class="trip"><td>06:10</td><td>06:16</td><td>06:22</td><td>06:28</td><td class="note"></td></tr>
+            <tr class="trip"><td>06:25</td><td>06:31</td><td>06:37</td><td>06:43</td><td class="note">Low-floor bus</td></tr>
+            <tr class="trip"><td>06:40</td><td>06:46</td><td>06:52</td><td>06:58</td><td class="note"></td></tr>
+            <tr class="trip"><td>06:55</td><td>07:01</td><td>07:07</td><td>07:13</td><td class="note"></td></tr>
+            <tr class="trip"><td>07:10</td><td>07:16</td><td>07:22</td><td>07:28</td><td class="note">Low-floor bus</td></tr>
+            <tr class="trip"><td>07:25</td><td>07:31</td><td>07:37</td><td>07:43</td><td class="note"></td></tr>
+            <tr class="trip"><td>07:40</td><td>07:46</td><td>07:52</td><td>07:58</td><td class="note"></td></tr>
+            <tr class="trip"><td>07:55</td><td>08:01</td><td>08:07</td><td>08:13</td><td class="note">Low-floor bus</td></tr>
+            <tr class="trip"><td>08:10</td><td>08:16</td><td>08:22</td><td>08:28</td><td class="note"></td></tr>
+            <tr class="trip"><td>08:25</td><td>08:31</td><td>08:37</td><td>08:43</td><td class="note"></td></tr>
+            <tr class="trip"><td>08:40</td><td>08:46</td><td>08:52</td><td>08:58</td><td class="note">Low-floor bus</td></tr>
+            <tr class="trip"><td>08:55</td><td>09:01</td><td>09:07</td><td>09:13</td><td class="note"></td></tr>
+            <tr class="trip"><td>09:10</td><td>09:16</td><td>09:22</td><td>09:28</td><td class="note"></td></tr>
+            <tr class="trip"><td>09:25</td><td>09:31</td><td>09:37</td><td>09:43</td><td class="note">Low-floor bus</td></tr>
+            <tr class="trip"><td>09:40</td><td>09:46</td><td>09:52</td><td>09:58</td><td class="note"></td></tr>
+            <tr class="trip"><td>09:55</td><td>10:01</td><td>10:07</td><td>10:13</td><td class="note"></td></tr>
+            <tr class="trip"><td>10:10</td><td>10:16</td><td>10:22</td><td>10:28</td><td class="note">Low-floor bus</td></tr>
+            <tr class="trip"><td>10:25</td><td>10:31</td><td>10:37</td><td>10:43</td><td class="note"></td></tr>
+            <tr class="trip"><td>10:40</td><td>10:46</td><td>10:52</td><td>10:58</td><td class="note"></td></tr>
+            <tr class="trip"><td>10:55</td><td>11:01</td><td>11:07</td><td>11:13</td><td class="note">Low-floor bus</td></tr>
+            <tr class="trip"><td>11:10</td><td>11:16</td><td>11:22</td><td>11:28</td><td class="note"></td></tr>
+            <tr class="trip"><td>11:25</td><td>11:31</td><td>11:37</td><td>11:43</td><td class="note"></td></tr>
+            <tr class="trip"><td>11:40</td><td>11:46</td><td>11:52</td><td>11:58</td><td class="note">Low-floor bus</td></tr>
+            <tr class="trip"><td>11:55</td><td>12:01</td><td>12:07</td><td>12:13</td><td class="note"></td></tr>
+            <tr class="trip"><td>12:10</td><td>12:16</td><td>12:22</td><td>12:28</td><td class="note"></td></tr>
+            <tr class="trip"><td>12:25</td><td>12:31</td><td>12:37</td><td>12:43</td><td class="note">Low-floor bus</td></tr>
+            <tr class="trip"><td>12:40</td><td>12:46</td><td>12:52</td><td>12:58</td><td class="note"></td></tr>
+            <tr class="trip"><td>12:55</td><td>13:01</td><td>13:07</td><td>13:13</td><td class="note"></td></tr>
+            <tr class="trip"><td>13:10</td><td>13:16</td><td>13:22</td><td>13:28</td><td class="note">Low-floor bus</td></tr>
+            <tr class="trip"><td>13:25</td><td>13:31</td><td>13:37</td><td>13:43</td><td class="note"></td></tr>
+            <tr class="trip"><td>13:40</td><td>13:46</td><td>13:52</td><td>13:58</td><td class="note"></td></tr>
+            <tr class="trip"><td>13:55</td><td>14:01</td><td>14:07</td><td>14:13</td><td class="note">Low-floor bus</td></tr>
+            <tr class="trip"><td>14:10</td><td>14:16</td><td>14:22</td><td>14:28</td><td class="note"></td></tr>
+            <tr class="trip"><td>14:25</td><td>14:31</td><td>14:37</td><td>14:43</td><td class="note"></td></tr>
+            <tr class="trip"><td>14:40</td><td>14:46</td><td>14:52</td><td>14:58</td><td class="note">Low-floor bus</td></tr>
+            <tr class="trip"><td>14:55</td><td>15:01</td><td>15:07</td><td>15:13</td><td class="note"></td></tr>
+            <tr class="trip"><td>15:10</td><td>15:16</td><td>15:22</td><td>15:28</td><td class="note"></td></tr>
+            <tr class="trip"><td>15:25</td><td>15:31</td><td>15:37</td><td>15:43</td><td class="note">Low-floor bus</td></tr>
+            <tr class="trip"><td>15:40</td><td>15:46</td><td>15:52</td><td>15:58</td><td class="note"></td></tr>
+            <tr class="trip"><td>15:55</td><td>16:01</td><td>16:07</td><td>16:13</td><td class="note"></td></tr>
+            <tr class="trip"><td>16:10</td><td>16:16</td><td>16:22</td><td>16:28</td><td class="note">Low-floor bus</td></tr>
+            <tr class="trip"><td>16:25</td><td>16:31</td><td>16:37</td><td>16:43</td><td class="note"></td></tr>
+            <tr class="trip"><td>16:40</td><td>16:46</td><td>16:52</td><td>16:58</td><td class="note"></td></tr>
+            <tr class="trip"><td>16:55</td><td>17:01</td><td>17:07</td><td>17:13</td><td class="note">Low-floor bus</td></tr>
+            <tr class="trip"><td>17:10</td><td>17:16</td><td>17:22</td><td>17:28</td><td class="note"></td></tr>
+            <tr class="trip"><td>17:25</td><td>17:31</td><td>17:37</td><td>17:43</td><td class="note"></td></tr>
+            <tr class="trip"><td>17:40</td><td>17:46</td><td>17:52</td><td>17:58</td><td class="note">Low-floor bus</td></tr>
+            <tr class="trip"><td>17:55</td><td>18:01</td><td>18:07</td><td>18:13</td><td class="note"></td></tr>
+            <tr class="trip"><td>18:10</td><td>18:16</td><td>18:22</td><td>18:28</td><td class="note"></td></tr>
+            <tr class="trip"><td>18:25</td><td>18:31</td><td>18:37</td><td>18:43</td><td class="note">Low-floor bus</td></tr>
+            <tr class="trip"><td>18:40</td><td>18:46</td><td>18:52</td><td>18:58</td><td class="note"></td></tr>
+            <tr class="trip"><td>18:55</td><td>19:01</td><td>19:07</td><td>19:13</td><td class="note"></td></tr>
+            <tr class="trip"><td>19:10</td><td>19:16</td><td>19:22</td><td>19:28</td><td class="note">Low-floor bus</td></tr>
+            <tr class="trip"><td>19:40</td><td>19:46</td><td>19:52</td><td>19:58</td><td class="note"></td></tr>
+            <tr class="trip"><td>20:10</td><td>20:16</td><td>20:22</td><td>20:28</td><td class="note"></td></tr>
+            <tr class="trip"><td>20:40</td><td>20:46</td><td>20:52</td><td>20:58</td><td class="note">Low-floor bus</td></tr>
+            <tr class="trip"><td>21:10</td><td>21:16</td><td>21:22</td><td>21:28</td><td class="note"></td></tr>
+            <tr class="trip"><td>21:40</td><td>21:46</td><td>21:52</td><td>21:58</td><td class="note"></td></tr>
+            <tr class="trip"><td>22:10</td><td>22:16</td><td>22:22</td><td>22:28</td><td class="note">Low-floor bus</td></tr>
+            <tr class="trip"><td>22:40</td><td>22:46</td><td>22:52</td><td>22:58</td><td class="note"></td></tr>
+    </tbody>
+</table>
+</body>
+</html>

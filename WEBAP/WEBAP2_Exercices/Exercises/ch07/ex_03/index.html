@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7.3 Weather dashboard</title>
+    <link rel="stylesheet" href="../../../assets/exercise.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#add">+ Add city</a>
+    </nav>
+    <p id="message" class="message"></p>
+    <p id="loading">loading …</p>
+
+    <section id="view-dashboard" class="view">
+        <h2>My cities <button id="refresh" title="refresh">⟳</button></h2>
+        <p>Sort by: <select id="sort"><option value="name">name</option><option value="temperature">temperature</option></select></p>
+        <div id="cards" class="cards"></div>
+    </section>
+
+    <section id="view-add" class="view">
+        <h2>Add a city</h2>
+        <form id="addForm">
+            <input type="text" id="cityName" placeholder="City name" required>
+            <button type="submit">Add</button>
+        </form>
+    </section>
+
+    <section id="view-city" class="view">
+        <p><a href="#dashboard">← Dashboard</a></p>
+        <h2 id="cityTitle"></h2>
+        <table id="forecast"></table>
+        <p><button id="removeCity">Remove from my cities</button></p>
+    </section>
+</body>
+</html>

@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "Luxembourg",
+        "country": "Luxembourg",
+        "latitude": 49.61,
+        "longitude": 6.13,
+        "population": 135000,
+        "description": "Capital of the Grand Duchy, seat of several European institutions."
+    },
+    {
+        "id": 2,
+        "name": "Esch-sur-Alzette",
+        "country": "Luxembourg",
+        "latitude": 49.5,
+        "longitude": 5.98,
+        "population": 37000,
+        "description": "Second largest city of Luxembourg, home of the University campus Belval."
+    },
+    {
+        "id": 3,
+        "name": "Trier",
+        "country": "Germany",
+        "latitude": 49.76,
+        "longitude": 6.64,
+        "population": 111000,
+        "description": "Oldest city of Germany, famous for its Roman monuments."
+    },
+    {
+        "id": 4,
+        "name": "Metz",
+        "country": "France",
+        "latitude": 49.12,
+        "longitude": 6.17,
+        "population": 120000,
+        "description": "City on the Moselle with the Centre Pompidou-Metz."
+    },
+    {
+        "id": 5,
+        "name": "Brussels",
+        "country": "Belgium",
+        "latitude": 50.85,
+        "longitude": 4.35,
+        "population": 1200000,
+        "description": "Capital of Belgium and of the European Union."
+    },
+    {
+        "id": 6,
+        "name": "Lisbon",
+        "country": "Portugal",
+        "latitude": 38.72,
+        "longitude": -9.14,
+        "population": 545000,
+        "description": "Capital of Portugal, built on seven hills."
+    }
+]

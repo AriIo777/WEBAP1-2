@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WEBAP2 – Chapter 4 exercises</title>
+    <link rel="stylesheet" href="../../assets/instructions.css">
+</head>
+<body>
+<nav><a href="../../index.html">↑ Overview</a> <a href="../ch03/instructions.html">← Chapter 3</a> <a href="../ch05/instructions.html">Chapter 5 →</a></nav>
+<h1>Chapter 4 – Processing and using the received data</h1>
+<p class="meta">Script: Chapter 4<br>
+Folder: <code>/WEBAP/Exercises/ch04/</code> – one folder <code>ex_xx</code> per exercise. Comments marked
+<code>TODO</code> show where to write your code. Folders containing only a <code>README.txt</code> start from a copy of
+the previous exercise.</p>
+<p>From now on you can use the function <code>getJson($url)</code> of <code>common/config.php</code> (it works like your <code>fetchJson()</code> of exercise 3.4) and <code>weatherInfo($code)</code> of <code>common/weathercodes.php</code>, which translates a weather code into a text and an icon.</p>
+<h2 id="ex_01">Exercise 4.1 – From parallel arrays to a list of days</h2>
+<p class="folder">Folder: ch04/ex_01/ &nbsp; <a class="open" href="ex_01/">open folder</a> &nbsp; Files provided: <code>forecast.php</code>, <code>index.html</code></p>
+<p>Open-Meteo returns the daily values as <b>parallel arrays</b>. For the client, a list of day objects is much easier to use.</p><ol><li><b>forecast.php</b> loads the 7-day forecast of Luxembourg (max, min, precipitation sum, weather code) and transforms it into an array of associative arrays: <code>[{"date":"23/11","weekday":"Monday","max":7.9,"min":2.3,"rain":0,"text":"Overcast","icon":"☁️"}, …]</code> (<code>for</code> loop, <code>strtotime()</code>, <code>date()</code>, <code>weatherInfo()</code>).</li><li>When the page is loaded, display the days in a table: weekday + date, icon + text, min, max, precipitation.</li><li>The row of the warmest day gets the CSS class <code>warm</code>. Find it in JavaScript.</li><li>Display precipitation of 0 mm as “–”.</li></ol>
+<h2 id="ex_02">Exercise 4.2 – Statistics with PHP array functions</h2>
+<p class="folder">Folder: ch04/ex_02/ &nbsp; <a class="open" href="ex_02/">open folder</a> &nbsp; Files provided: <code>index.html</code>, <code>stats.php</code></p>
+<p><b>stats.php</b> receives a city, loads its 14-day forecast (geocoding + forecast) and calculates – with PHP array functions, without writing loops – the following values:</p><ul><li>average of the maximum and of the minimum temperatures (<code>array_sum()</code>, <code>count()</code>, <code>round()</code>)</li><li>highest maximum and lowest minimum (<code>max()</code>, <code>min()</code>)</li><li>the date of the warmest day, formatted as <i>Friday 27/11</i> (<code>array_search()</code>)</li><li>total precipitation and number of rainy days with at least 1 mm (<code>array_filter()</code>)</li></ul><p>The client displays the values in a table. Handle unknown cities (status 404).</p>
+<h2 id="ex_03">Exercise 4.3 – Book search with Open Library</h2>
+<p class="folder">Folder: ch04/ex_03/ &nbsp; <a class="open" href="ex_03/">open folder</a> &nbsp; Files provided: <code>books.php</code>, <code>index.html</code></p>
+<ol><li><b>books.php</b> searches Open Library (<code>API_BOOKS</code>, parameters <code>q</code>, <code>fields=key,title,author_name,first_publish_year,cover_i</code>, <code>limit=20</code>) and transforms each result: the author list becomes one string (<code>implode()</code>, “unknown author” if missing), missing years become <code>null</code>, and <code>cover_i</code> becomes the URL <code>https://covers.openlibrary.org/b/id/{cover_i}-M.jpg</code> (or <code>null</code>).</li><li>Sort the books in PHP according to the parameter <code>sort</code>: <i>year</i> (newest first, <code>usort()</code>) or <i>title</i> (<code>strcasecmp()</code>); <i>relevance</i> keeps the order of the API.</li><li>The client displays one card per book (cover, title, author, year) and the total number of results.</li><li>The checkbox <b>only books with a cover</b> hides/shows the cards <b>on the client</b> without a new request. Why is the client the better place for this filter, and PHP the better place for the transformation? (section 4.7)</li></ol><p class="tip">Offline (mock service), the cover images cannot be loaded – display a grey placeholder (<code>onerror</code> or CSS).</p>
+<h2 id="ex_04">Exercise 4.4 – Sorting and filtering on the client</h2>
+<p class="folder">Folder: ch04/ex_04/ &nbsp; <a class="open" href="ex_04/">open folder</a> &nbsp; Files provided: <code>index.html</code>, <code>rates.php</code></p>
+<ol><li><b>rates.php</b> combines two answers of the Frankfurter API: the rates of the selected base currency and the names of the currencies. It returns a list of objects <code>{"code":"USD","name":"United States Dollar","rate":1.0864}</code>.</li><li>The client loads the list once when the page is loaded or the base currency changes, stores it in a variable and displays it.</li><li>While the user types into the filter field (event <code>input</code>), only currencies whose code or name contains the text are displayed – without a new request.</li><li>Clicking on a column header sorts the table by this column; a second click reverses the order (<code>Array.sort()</code> with a compare function, <code>localeCompare()</code> for texts).</li></ol>
+<h2 id="ex_05">Exercise 4.5 – A bar chart with CSS</h2>
+<p class="folder">Folder: ch04/ex_05/ &nbsp; <a class="open" href="ex_05/">open folder</a> &nbsp; Files provided: <code>index.html</code>, <code>temperatures.php</code></p>
+<p>Visualise the 14-day forecast of a city as a bar chart – without a chart library, only with <code>div</code> elements whose height is calculated in JavaScript.</p><ol><li><b>temperatures.php</b> returns <code>{"city":"Luxembourg","days":[{"label":"Mon 23","max":7.9,"min":2.3}, …]}</code>.</li><li>For every day, add a column with a red bar (max) and a blue bar (min) and the label below. The height of a bar is proportional to the temperature: the highest value of all days = 150 px (<code>Math.max(...array)</code>).</li><li>Show the value in a tooltip (attribute <code>title</code>).</li><li><b>For advanced users:</b> negative temperatures – find a solution so that the bars still make sense (e.g. calculate the height from the lowest value).</li></ol>
+</body>
+</html>

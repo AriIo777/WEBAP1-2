@@ -1,0 +1,30 @@
+{
+    "results": [
+        {
+            "id": 2960316,
+            "name": "Luxembourg",
+            "latitude": 49.61167,
+            "longitude": 6.13,
+            "elevation": 300.0,
+            "feature_code": "PPLC",
+            "country_code": "LU",
+            "timezone": "Europe/Luxembourg",
+            "population": 76684,
+            "country": "Luxembourg",
+            "admin1": "Luxembourg"
+        },
+        {
+            "id": 2960315,
+            "name": "Luxembourg",
+            "latitude": 49.75,
+            "longitude": 6.08333,
+            "elevation": 375.0,
+            "feature_code": "PCLI",
+            "country_code": "LU",
+            "timezone": "Europe/Luxembourg",
+            "population": 660809,
+            "country": "Luxembourg"
+        }
+    ],
+    "generationtime_ms": 0.6
+}
